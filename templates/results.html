@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <title>Extracted Colors</title>
+  </head>
+  <body>
+    <h2>Extracted Colors</h2>
+
+    <!-- Display Uploaded Image -->
+
+    <!-- <h3>Color List:</h3> -->
+    <!-- <ul>
+      {% for color in colors %}
+      <li>rgb({{ color[0] }}, {{ color[1] }}, {{ color[2] }})</li>
+      {% endfor %}
+    </ul> -->
+
+    <h3>Colors</h3>
+    <div>
+      {% for color in colors %}
+
+      <div
+        class="color-box"
+        style="background-color: rgb({{ color[0] }}, {{ color[1] }}, {{ color[2] }});"
+      ></div>
+      {% endfor %}
+    </div>
+
+    <br />
+    <a href="/">Upload Another Image</a>
+  </body>
+</html>
